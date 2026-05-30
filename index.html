@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kishor Kumar - Civil Engineer, HVAC researcher, and building energy simulation specialist.">
+  <title>Kishor Kumar | Civil Engineer & HVAC Researcher</title>
+  <style>
+    :root {
+      --ink: #17202f;
+      --muted: #5b6678;
+      --line: #d8dee8;
+      --paper: #ffffff;
+      --mist: #f5f7fb;
+      --navy: #102846;
+      --teal: #11827f;
+      --green: #4f8b64;
+      --amber: #d99b32;
+      --shadow: 0 18px 44px rgba(23, 32, 47, 0.12);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--mist);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      letter-spacing: 0;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .site-shell {
+      overflow: clip;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.76), rgba(245, 247, 251, 0.98) 720px),
+        var(--mist);
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 72px;
+      padding: 0 5vw;
+      border-bottom: 1px solid rgba(216, 222, 232, 0.84);
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(18px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      font-weight: 800;
+      color: var(--navy);
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--navy), var(--teal));
+      border-radius: 8px;
+      font-size: 15px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 40px;
+      padding: 0 12px;
+      border-radius: 8px;
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.is-active {
+      color: var(--navy);
+      background: #eef5f4;
+    }
+
+    .menu-button {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--paper);
+      color: var(--navy);
+      cursor: pointer;
+    }
+
+    .menu-button svg,
+    .button svg,
+    .text-link svg,
+    .contact-link svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+      flex: 0 0 auto;
+    }
+
+    .hero {
+      position: relative;
+      min-height: 86svh;
+      display: grid;
+      align-items: center;
+      padding: 76px 5vw 88px;
+      background:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.9) 36%, rgba(255, 255, 255, 0.2) 68%),
+        url("assets/hero-building.png") center right / cover no-repeat;
+    }
+
+    .hero-inner {
+      width: min(1160px, 100%);
+      margin: 0 auto;
+    }
+
+    .hero-content {
+      max-width: 720px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 18px;
+      color: var(--teal);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 34px;
+      height: 2px;
+      background: var(--teal);
+    }
+
+    h1 {
+      max-width: 680px;
+      margin: 0;
+      color: var(--navy);
+      font-size: 64px;
+      line-height: 1.02;
+      letter-spacing: 0;
+    }
+
+    .hero-lede {
+      max-width: 610px;
+      margin: 24px 0 0;
+      color: #394559;
+      font-size: 20px;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 18px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: 800;
+      text-decoration: none;
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .button.primary {
+      color: #ffffff;
+      background: var(--navy);
+    }
+
+    .button.secondary {
+      color: var(--navy);
+      border-color: rgba(16, 40, 70, 0.18);
+      background: rgba(255, 255, 255, 0.78);
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+      color: #304158;
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 0 12px;
+      border: 1px solid rgba(16, 40, 70, 0.12);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.74);
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .profile-panel {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+      gap: 18px;
+      max-width: 470px;
+      margin-top: 38px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(16, 40, 70, 0.14);
+    }
+
+    .portrait {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 92px;
+      height: 92px;
+      overflow: hidden;
+      border: 4px solid #ffffff;
+      border-radius: 50%;
+      background:
+        linear-gradient(135deg, rgba(17, 130, 127, 0.16), rgba(217, 155, 50, 0.18)),
+        #eef5f4;
+      box-shadow: 0 12px 32px rgba(16, 40, 70, 0.16);
+      color: var(--navy);
+      font-size: 28px;
+      font-weight: 900;
+    }
+
+    .portrait img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .portrait span {
+      display: none;
+    }
+
+    .portrait.portrait-fallback span {
+      display: inline;
+    }
+
+    .profile-panel strong {
+      display: block;
+      color: var(--navy);
+      font-size: 18px;
+      line-height: 1.2;
+    }
+
+    .profile-panel p {
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    main {
+      background: var(--paper);
+    }
+
+    section {
+      scroll-margin-top: 90px;
+    }
+
+    .section {
+      padding: 88px 5vw;
+    }
+
+    .section.alt {
+      background: #f8fafc;
+    }
+
+    .section-inner {
+      width: min(1160px, 100%);
+      margin: 0 auto;
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(260px, 1.1fr);
+      gap: 56px;
+      align-items: end;
+      margin-bottom: 38px;
+    }
+
+    .section-kicker {
+      margin: 0 0 10px;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 36px;
+      line-height: 1.16;
+      letter-spacing: 0;
+    }
+
+    .section-heading p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
+      gap: 34px;
+      align-items: start;
+    }
+
+    .lead-copy {
+      margin: 0;
+      color: #344154;
+      font-size: 19px;
+      line-height: 1.8;
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .metric {
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #ffffff;
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--teal);
+      font-size: 28px;
+      line-height: 1;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      line-height: 1.35;
+    }
+
+    .quick-info {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .about-side {
+      display: grid;
+      gap: 18px;
+    }
+
+    .about-portrait {
+      margin: 0;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #eef5f4;
+      box-shadow: 0 14px 36px rgba(23, 32, 47, 0.08);
+    }
+
+    .about-portrait img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    .quick-info li {
+      display: grid;
+      gap: 4px;
+      padding: 18px;
+      border-left: 4px solid var(--teal);
+      background: #f6fbfa;
+      border-radius: 0 var(--radius) var(--radius) 0;
+    }
+
+    .quick-info span {
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .quick-info strong {
+      color: var(--navy);
+      font-size: 16px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .expertise-card,
+    .project-card,
+    .award-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+      box-shadow: 0 10px 28px rgba(23, 32, 47, 0.06);
+    }
+
+    .expertise-card {
+      padding: 24px;
+    }
+
+    .icon-box {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      margin-bottom: 18px;
+      border-radius: 8px;
+      color: #ffffff;
+      background: var(--navy);
+    }
+
+    .icon-box svg {
+      width: 22px;
+      height: 22px;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+
+    h3 {
+      margin: 0;
+      color: var(--navy);
+      font-size: 20px;
+      line-height: 1.3;
+    }
+
+    .expertise-card p,
+    .project-card p,
+    .award-card p {
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .tag-list li {
+      padding: 6px 9px;
+      border: 1px solid rgba(17, 130, 127, 0.16);
+      border-radius: 8px;
+      color: #216a69;
+      background: #eff8f7;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .project-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+    }
+
+    .project-card {
+      padding: 26px;
+    }
+
+    .project-card.featured {
+      display: grid;
+      align-content: space-between;
+      min-height: 330px;
+      color: #ffffff;
+      border-color: transparent;
+      background:
+        linear-gradient(135deg, rgba(16, 40, 70, 0.96), rgba(17, 130, 127, 0.86)),
+        url("assets/hero-building.png") center / cover no-repeat;
+    }
+
+    .project-card.featured h3,
+    .project-card.featured p {
+      color: #ffffff;
+    }
+
+    .project-card.featured p {
+      max-width: 620px;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .project-stack {
+      display: grid;
+      gap: 18px;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 22px;
+      color: var(--navy);
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .timeline li {
+      position: relative;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--paper);
+    }
+
+    .timeline li::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 26px;
+      width: 52px;
+      height: 4px;
+      background: var(--amber);
+    }
+
+    .timeline time {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--green);
+      font-size: 13px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    .timeline p {
+      margin: 10px 0 0;
+      color: var(--muted);
+    }
+
+    .award-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+    }
+
+    .award-card {
+      padding: 20px;
+    }
+
+    .award-card strong {
+      display: block;
+      color: var(--navy);
+      line-height: 1.35;
+    }
+
+    .award-card p {
+      font-size: 14px;
+    }
+
+    .contact-section {
+      padding: 88px 5vw;
+      color: #ffffff;
+      background:
+        linear-gradient(135deg, rgba(16, 40, 70, 0.96), rgba(18, 77, 82, 0.96)),
+        url("assets/hero-building.png") center / cover no-repeat;
+    }
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.1fr);
+      gap: 48px;
+      align-items: start;
+      width: min(1160px, 100%);
+      margin: 0 auto;
+    }
+
+    .contact-section .section-kicker,
+    .contact-section h2,
+    .contact-section p {
+      color: #ffffff;
+    }
+
+    .contact-section p {
+      margin: 16px 0 0;
+      color: rgba(255, 255, 255, 0.78);
+      font-size: 17px;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .contact-link {
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 14px;
+      align-items: center;
+      min-height: 72px;
+      padding: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: var(--radius);
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.1);
+      text-decoration: none;
+    }
+
+    .contact-link svg {
+      place-self: center;
+      width: 22px;
+      height: 22px;
+    }
+
+    .contact-link span {
+      display: block;
+      color: rgba(255, 255, 255, 0.72);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+
+    .contact-link strong {
+      display: block;
+      color: #ffffff;
+      font-size: 16px;
+      line-height: 1.35;
+      word-break: break-word;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 24px 5vw;
+      color: var(--muted);
+      background: #ffffff;
+      border-top: 1px solid var(--line);
+      font-size: 14px;
+    }
+
+    footer a {
+      color: var(--navy);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    @media (max-width: 1080px) {
+      .card-grid,
+      .award-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .project-grid,
+      .about-grid,
+      .contact-layout,
+      .section-heading {
+        grid-template-columns: 1fr;
+      }
+
+      .section-heading {
+        gap: 14px;
+      }
+
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .nav {
+        min-height: 64px;
+        padding: 0 18px;
+      }
+
+      .menu-button {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 64px;
+        left: 18px;
+        right: 18px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: var(--shadow);
+      }
+
+      .nav[data-open="true"] .nav-links {
+        display: flex;
+      }
+
+      .nav-links a {
+        min-height: 44px;
+      }
+
+      .hero {
+        min-height: calc(100svh - 176px);
+        align-items: start;
+        padding: 38px 20px 34px;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.88) 56%, rgba(255, 255, 255, 0.18)),
+          url("assets/hero-building.png") center right / cover no-repeat;
+      }
+
+      .eyebrow {
+        margin-bottom: 12px;
+        font-size: 12px;
+      }
+
+      h1 {
+        font-size: 40px;
+        line-height: 1.08;
+      }
+
+      .hero-lede {
+        margin-top: 16px;
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
+      .hero-actions {
+        flex-wrap: nowrap;
+        gap: 10px;
+        margin-top: 22px;
+      }
+
+      .hero-actions .button {
+        flex: 1 1 0;
+      }
+
+      .hero-meta {
+        gap: 8px;
+        margin-top: 18px;
+      }
+
+      .hero-meta span {
+        min-height: 30px;
+        padding: 0 10px;
+        font-size: 12px;
+      }
+
+      .profile-panel {
+        display: none;
+      }
+
+      .portrait {
+        width: 82px;
+        height: 82px;
+        font-size: 24px;
+      }
+
+      .section,
+      .contact-section {
+        padding: 58px 20px;
+      }
+
+      h2 {
+        font-size: 30px;
+      }
+
+      .metrics,
+      .card-grid,
+      .project-grid,
+      .award-grid {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .button {
+        width: auto;
+        min-width: 0;
+        padding: 0 12px;
+        font-size: 14px;
+      }
+
+      footer {
+        padding: 22px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="site-shell">
+    <nav class="nav" id="topNav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Kishor Kumar home">
+        <span class="brand-mark">KK</span>
+        <span>Kishor Kumar</span>
+      </a>
+
+      <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"></path></svg>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <header class="hero" id="top">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <p class="eyebrow">Civil Engineering | HVAC Research</p>
+          <h1>Kishor Kumar</h1>
+          <p class="hero-lede">
+            Master's student and civil engineer focused on HVAC systems, CFD simulation, COMSOL modeling, and energy-conscious building design.
+          </p>
+
+          <div class="hero-actions" aria-label="Contact actions">
+            <a class="button primary" href="mailto:kkd5038@gmail.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"></path><path d="m4 7 8 6 8-6"></path></svg>
+              Email Kishor
+            </a>
+            <a class="button secondary" href="https://www.linkedin.com/in/k-k-d-2b031a27b" target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><path d="M2 9h4v12H2z"></path><path d="M4 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path></svg>
+              LinkedIn
+            </a>
+          </div>
+
+          <div class="hero-meta" aria-label="Professional highlights">
+            <span>Donghua University</span>
+            <span>CSC Scholar</span>
+            <span>Shanghai, China</span>
+          </div>
+
+          <div class="profile-panel">
+            <div class="portrait" aria-label="Kishor Kumar profile photo">
+              <img src="assets/profile.jpg" alt="Kishor Kumar" onerror="this.remove(); this.parentElement.classList.add('portrait-fallback');">
+              <span>KK</span>
+            </div>
+            <div>
+              <strong>Civil Engineer & Building Systems Researcher</strong>
+              <p>Interested in sustainable infrastructure, indoor airflow, heat transfer, BIM, and simulation-led design decisions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section" id="about">
+        <div class="section-inner">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Profile</p>
+              <h2>Engineering research for smarter, more efficient buildings.</h2>
+            </div>
+            <p>
+              Kishor combines civil engineering training with HVAC research interests, using simulation, BIM, and analytical tools to study building performance and sustainable design.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <div>
+              <p class="lead-copy">
+                I am a Civil Engineer and Master's student in Civil Engineering (HVAC) at Donghua University in Shanghai, China. My work centers on HVAC systems, building energy conservation, indoor airflow behavior, heat transfer, CFD simulation, COMSOL Multiphysics, BIM, and architectural design. I am motivated by engineering solutions that make buildings more comfortable, efficient, and environmentally responsible.
+              </p>
+
+              <div class="metrics" aria-label="Academic highlights">
+                <div class="metric">
+                  <strong>3.47</strong>
+                  <span>Bachelor CGPA</span>
+                </div>
+                <div class="metric">
+                  <strong>3.70</strong>
+                  <span>Diploma CGPA</span>
+                </div>
+                <div class="metric">
+                  <strong>2024</strong>
+                  <span>Master's Start</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="about-side">
+              <figure class="about-portrait">
+                <img src="assets/profile.jpg" alt="Portrait of Kishor Kumar">
+              </figure>
+
+              <ul class="quick-info">
+                <li>
+                  <span>Current Program</span>
+                  <strong>Master of Civil Engineering (HVAC), Donghua University</strong>
+                </li>
+                <li>
+                  <span>Research Direction</span>
+                  <strong>HVAC optimization, CFD airflow analysis, heat transfer, building energy conservation</strong>
+                </li>
+                <li>
+                  <span>Professional Base</span>
+                  <strong>Civil engineering, architectural design, BIM, and sustainable building systems</strong>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="expertise">
+        <div class="section-inner">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Expertise</p>
+              <h2>Technical strengths across design, modeling, and research.</h2>
+            </div>
+            <p>
+              A focused toolkit for building systems research, civil engineering design, and simulation-supported decision making.
+            </p>
+          </div>
+
+          <div class="card-grid">
+            <article class="expertise-card">
+              <div class="icon-box">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21h18"></path><path d="M5 21V7l8-4v18"></path><path d="M19 21V11l-6-4"></path><path d="M9 9h1M9 13h1M9 17h1M15 13h1M15 17h1"></path></svg>
+              </div>
+              <h3>Engineering Design</h3>
+              <p>Architectural and civil design workflows for building projects, documentation, and model coordination.</p>
+              <ul class="tag-list">
+                <li>AutoCAD 2D/3D</li>
+                <li>Revit</li>
+                <li>3ds Max</li>
+                <li>BIM</li>
+              </ul>
+            </article>
+
+            <article class="expertise-card">
+              <div class="icon-box" style="background: var(--teal);">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12c4-6 12 6 16 0"></path><path d="M4 7c4-5 12 5 16 0"></path><path d="M4 17c4-5 12 5 16 0"></path></svg>
+              </div>
+              <h3>HVAC Simulation</h3>
+              <p>Airflow, heat transfer, and energy-performance studies for indoor environments and building systems.</p>
+              <ul class="tag-list">
+                <li>CFD</li>
+                <li>COMSOL</li>
+                <li>HVAC Modeling</li>
+                <li>Heat Transfer</li>
+              </ul>
+            </article>
+
+            <article class="expertise-card">
+              <div class="icon-box" style="background: var(--green);">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19.5V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-1.5z"></path><path d="M8 7h6M8 11h8M8 15h5"></path></svg>
+              </div>
+              <h3>Research Methods</h3>
+              <p>Literature review, technical synthesis, and evidence gathering from scientific research databases.</p>
+              <ul class="tag-list">
+                <li>Scopus</li>
+                <li>Web of Science</li>
+                <li>CNKI</li>
+                <li>ScienceDirect</li>
+              </ul>
+            </article>
+
+            <article class="expertise-card">
+              <div class="icon-box" style="background: var(--amber);">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 18 22 12l-6-6"></path><path d="m8 6-6 6 6 6"></path><path d="m14.5 4-5 16"></path></svg>
+              </div>
+              <h3>Data & Analysis</h3>
+              <p>Growing programming and analytical skills for simulation workflows, data interpretation, and visualization.</p>
+              <ul class="tag-list">
+                <li>Python</li>
+                <li>MATLAB</li>
+                <li>Data Analysis</li>
+                <li>Visualization</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-inner">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Projects</p>
+              <h2>Selected academic and research directions.</h2>
+            </div>
+            <p>
+              Portfolio work includes civil engineering design, BIM, architectural projects, and planned simulation studies in HVAC and building energy conservation.
+            </p>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card featured">
+              <div>
+                <p class="section-kicker">Bachelor Thesis Project</p>
+                <h3>Zhengzhou International Commercial Office Building Design</h3>
+                <p>
+                  A comprehensive civil engineering design project covering building planning, structural thinking, architectural coordination, and presentation of a commercial office building concept.
+                </p>
+              </div>
+              <a class="text-link" href="#contact">
+                Discuss related work
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+              </a>
+            </article>
+
+            <div class="project-stack">
+              <article class="project-card">
+                <h3>Building Information Modeling</h3>
+                <p>Model-based design coordination with Revit and BIM concepts for architecture and construction workflows.</p>
+                <ul class="tag-list">
+                  <li>BIM</li>
+                  <li>Revit</li>
+                  <li>Design Coordination</li>
+                </ul>
+              </article>
+
+              <article class="project-card">
+                <h3>Future Research Studies</h3>
+                <p>Focused studies in indoor airflow CFD, HVAC optimization, COMSOL heat transfer simulation, and building energy conservation.</p>
+                <ul class="tag-list">
+                  <li>Indoor Airflow</li>
+                  <li>Energy Conservation</li>
+                  <li>COMSOL</li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="education">
+        <div class="section-inner">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Education</p>
+              <h2>Academic foundation in civil engineering and design technology.</h2>
+            </div>
+            <p>
+              Training across graduate HVAC research, civil engineering, architecture, and interior design technology.
+            </p>
+          </div>
+
+          <ol class="timeline">
+            <li>
+              <time>2024 - Present</time>
+              <h3>Master of Civil Engineering (HVAC)</h3>
+              <p>Donghua University, Shanghai, China</p>
+            </li>
+            <li>
+              <time>Bachelor Degree</time>
+              <h3>Bachelor of Civil Engineering</h3>
+              <p>Zhengzhou University, China. CGPA: 3.47 / 4.00</p>
+            </li>
+            <li>
+              <time>Diploma</time>
+              <h3>Architecture & Interior Design Technology</h3>
+              <p>Diploma in Engineering. CGPA: 3.70 / 4.00</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="awards">
+        <div class="section-inner">
+          <div class="section-heading">
+            <div>
+              <p class="section-kicker">Recognition</p>
+              <h2>Awards, scholarships, and certificates.</h2>
+            </div>
+            <p>
+              Academic and international experience supported by scholarship recognition and extracurricular honors.
+            </p>
+          </div>
+
+          <div class="award-grid">
+            <article class="award-card">
+              <strong>Chinese Government Scholarship</strong>
+              <p>CSC scholarship recognition</p>
+            </article>
+            <article class="award-card">
+              <strong>Outstanding Graduate Student</strong>
+              <p>Academic achievement</p>
+            </article>
+            <article class="award-card">
+              <strong>Henan Government Provincial Scholarship</strong>
+              <p>Provincial scholarship award</p>
+            </article>
+            <article class="award-card">
+              <strong>International Kite Festival</strong>
+              <p>Honor certificate</p>
+            </article>
+            <article class="award-card">
+              <strong>Health Qigong</strong>
+              <p>Honor certificate</p>
+            </article>
+            <article class="award-card">
+              <strong>National Culture Festival - Poetry Recital</strong>
+              <p>Honor certificate - Nov 18, 2025. Recognized for commitment and contribution to cultural exchange.</p>
+            </article>
+            <article class="award-card">
+              <strong>DHU Outstanding Student Award</strong>
+              <p>Honor certificate - Jan 15, 2026. Recognized for academic excellence, social contribution, and university engagement.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div class="contact-layout">
+          <div>
+            <p class="section-kicker">Contact</p>
+            <h2>Available for research collaboration and engineering opportunities.</h2>
+            <p>
+              Reach out for civil engineering, HVAC research, CFD simulation, BIM, or sustainable building design conversations.
+            </p>
+          </div>
+
+          <ul class="contact-list">
+            <li>
+              <a class="contact-link" href="mailto:kkd5038@gmail.com">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4z"></path><path d="m4 7 8 6 8-6"></path></svg>
+                <span>Email</span>
+                <strong>kkd5038@gmail.com</strong>
+              </a>
+            </li>
+            <li>
+              <a class="contact-link" href="https://www.linkedin.com/in/k-k-d-2b031a27b" target="_blank" rel="noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><path d="M2 9h4v12H2z"></path><path d="M4 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"></path></svg>
+                <span>LinkedIn</span>
+                <strong>linkedin.com/in/k-k-d-2b031a27b</strong>
+              </a>
+            </li>
+            <li>
+              <div class="contact-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 1 1 18 0z"></path><path d="M12 10a3 3 0 1 0 0.1 0"></path></svg>
+                <span>Location</span>
+                <strong>Shanghai, China / Bangladesh</strong>
+              </div>
+            </li>
+            <li>
+              <div class="contact-link">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"></path></svg>
+                <span>WeChat</span>
+                <strong>KKD1911ZZU</strong>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>&copy; 2026 Kishor Kumar. All rights reserved.</span>
+      <a href="#top">Back to top</a>
+    </footer>
+  </div>
+
+  <script>
+    const nav = document.querySelector("#topNav");
+    const menuButton = document.querySelector(".menu-button");
+    const navLinks = Array.from(document.querySelectorAll(".nav-links a"));
+    const sections = navLinks
+      .map((link) => document.querySelector(link.getAttribute("href")))
+      .filter(Boolean);
+
+    menuButton.addEventListener("click", () => {
+      const isOpen = nav.getAttribute("data-open") === "true";
+      nav.setAttribute("data-open", String(!isOpen));
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+    });
+
+    navLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        nav.setAttribute("data-open", "false");
+        menuButton.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        navLinks.forEach((link) => {
+          link.classList.toggle("is-active", link.getAttribute("href") === `#${entry.target.id}`);
+        });
+      });
+    }, { rootMargin: "-35% 0px -55% 0px", threshold: 0.01 });
+
+    sections.forEach((section) => observer.observe(section));
+  </script>
+</body>
+</html>
